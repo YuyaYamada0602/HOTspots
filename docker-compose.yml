@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  firebase:
+    build: .
+    container_name: firebase
+    ports:
+      - 9000:9000
+    volumes:
+      - ./src:/src
+    tty: true
+    stdin_open: true
+    command: /bin/ash
